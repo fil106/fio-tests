@@ -1,0 +1,30 @@
+fio-test-job: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=1
+fio-3.16
+Starting 1 process
+
+fio: terminating on signal 2
+
+fio-test-job: (groupid=0, jobs=1): err= 0: pid=34795: Mon Jul 26 12:12:29 2021
+  write: IOPS=543, BW=2173KiB/s (2225kB/s)(2084KiB/959msec); 0 zone resets
+    slat (nsec): min=14574, max=96383, avg=20212.12, stdev=3749.96
+    clat (usec): min=991, max=5881, avg=1810.03, stdev=452.87
+     lat (usec): min=1009, max=5903, avg=1831.21, stdev=453.01
+    clat percentiles (usec):
+     |  1.00th=[ 1172],  5.00th=[ 1287], 10.00th=[ 1319], 20.00th=[ 1385],
+     | 30.00th=[ 1500], 40.00th=[ 1663], 50.00th=[ 1795], 60.00th=[ 1893],
+     | 70.00th=[ 1975], 80.00th=[ 2114], 90.00th=[ 2343], 95.00th=[ 2507],
+     | 99.00th=[ 2933], 99.50th=[ 3654], 99.90th=[ 5866], 99.95th=[ 5866],
+     | 99.99th=[ 5866]
+   bw (  KiB/s): min= 2200, max= 2200, per=100.00%, avg=2200.00, stdev= 0.00, samples=1
+   iops        : min=  550, max=  550, avg=550.00, stdev= 0.00, samples=1
+  lat (usec)   : 1000=0.19%
+  lat (msec)   : 2=71.21%, 4=28.21%, 10=0.38%
+  cpu          : usr=1.57%, sys=3.24%, ctx=523, majf=0, minf=8
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,521,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=2173KiB/s (2225kB/s), 2173KiB/s-2173KiB/s (2225kB/s-2225kB/s), io=2084KiB (2134kB), run=959-959msec
