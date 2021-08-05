@@ -1,5 +1,5 @@
 dir_res="./fio-results-bs-4k-local"
-dir_mount="./results/$1"
+dir_mount="/mnt/$1"
 disk_type="$1"
 file_size="100M"
 bs="4k"
